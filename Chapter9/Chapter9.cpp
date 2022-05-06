@@ -27,6 +27,23 @@ int main()
 	std::cout << "You entered: \n";
 
 	print(v);
+
+	std::cout << "\nSorted: \n";
+
+	for (int i = 0; i < v.size(); i++)
+	{
+		for (int j = i + 1; j < v.size(); j++)
+		{
+			if (v[i] > v[j])
+			{
+				int temp = v[i];
+				v[i] = v[j];
+				v[j] = temp;
+			}
+		}
+	}
+
+	print(v);
 	
 }
 
